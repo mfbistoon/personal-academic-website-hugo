@@ -1,0 +1,18 @@
+# Pages listed at the top of the homepage. `weight` sets the order.
+
+main:
+  - name: Home
+    url: /
+    weight: 5
+  - name: Research Projects
+    url: projects/
+    weight: 10
+  - name: Publications
+    url: publications/
+    weight: 20
+  - name: Teaching
+    url: teaching/
+    weight: 30
+  - name: CV
+    url: uploads/cv.pdf
+    weight: 40

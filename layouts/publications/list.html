@@ -1,0 +1,48 @@
+{{/* Publications list in the style of the CV:
+     numbered, grouped by type, newest first, "Authors (Year), “Title”, Venue." */}}
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ $groups := slice
+  (dict "title" "Journal articles" "type" "article-journal")
+  (dict "title" "Book chapters" "type" "chapter")
+  (dict "title" "Peer-reviewed conference articles" "type" "paper-conference")
+}}
+{{ $all := .Pages.ByDate.Reverse }}
+
+<div class="mt-12 container max-w-3xl w-full mx-auto px-4">
+  {{ range $groups }}
+  {{ $type := .type }}
+  {{ $items := where $all "Params.publication_types" "intersect" (slice $type) }}
+  {{ if $items }}
+  <h2 class="mt-10 mb-4 text-2xl font-bold text-primary-700 dark:text-primary-300">{{ .title }}</h2>
+  <ol class="list-decimal pl-8 space-y-4">
+    {{ range $items }}
+    {{ $pub := partial "functions/resolve_publication.html" . }}
+    {{ $names := slice }}
+    {{ range .Params.authors }}{{ if eq . "me" }}{{ $names = $names | append "M. Farhadloo" }}{{ else }}{{ $names = $names | append . }}{{ end }}{{ end }}
+    {{ $n := len $names }}
+    <li>
+      {{ if eq $n 1 }}{{ index $names 0 }}
+      {{ else if eq $n 2 }}{{ index $names 0 }} and {{ index $names 1 }}
+      {{ else }}{{ delimit (first (sub $n 1) $names) ", " }}, and {{ index $names (sub $n 1) }}{{ end }}
+      ({{ .Date.Format "2006" }}), “<a href="{{ .RelPermalink }}" class="underline">{{ .Title }}</a>”{{ with $pub.display }}, {{ . | markdownify }}{{ end }}.
+      {{ if partial "functions/has_attachments" . }}
+      <div class="flex flex-wrap space-x-3 mt-1">
+        {{ partial "page_links" (dict "page" . "is_list" 1) }}
+      </div>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ol>
+  {{ end }}
+  {{ end }}
+</div>
+
+{{ end }}

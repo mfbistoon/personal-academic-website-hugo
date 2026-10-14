@@ -1,0 +1,146 @@
+# Profile content taken from MFcv.pdf.
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Mohsen Farhadloo
+  given: Mohsen
+  family: Farhadloo
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
+postnominals:
+  - PhD
+status:
+  icon: "🎓"
+role: Associate Professor, Business Analytics
+bio: |
+  Mohsen Farhadloo is an Associate Professor of Business Analytics in the Supply Chain
+  and Business Technology Management department at the John Molson School of Business,
+  Concordia University, and holds the Concordia Research Chair in Business Analytics for
+  Public Health and Policy.
+
+  With a background in statistical learning and data mining, he studies how organizations,
+  individuals, and society can use the ever-increasing amount of online data in their
+  decision-making. He develops and applies new statistical models to study customer
+  satisfaction, public health, and public policy, and is currently working on social media
+  analytics with applications in public health, public policy, and management.
+
+affiliations:
+  - name: John Molson School of Business
+    url: https://www.concordia.ca/jmsb.html
+  - name: Concordia University
+    url: https://www.concordia.ca/
+
+links:
+  - icon: at-symbol
+    url: mailto:mohsen.farhadloo@concordia.ca
+    label: E-mail Me
+  # SAMPLE LINKS: replace these four with your real profile URLs.
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=_q7fldEAAAAJ&hl=en
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0000-0000-0000
+  - icon: brands/github
+    url: https://github.com/sample-username
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/mohsen-farhadloo-351a8345/?isSelfProfile=true
+
+# Interests are hidden on the homepage. Uncomment to show them again.
+# interests:
+#   - Social Media Analytics
+#   - Public Health and Policy
+#   - Statistical Learning and Data Mining
+#   - Customer Satisfaction
+
+education:
+  - degree: PhD, Electrical Engineering and Computer Science
+    institution: University of California, Merced, USA
+    start: 2010-01-01
+    end: 2015-08-31
+  - degree: M.Sc., Electrical Engineering (Communications Systems)
+    institution: Amirkabir University of Technology (Tehran Polytechnic), Iran
+    start: 2006-09-01
+    end: 2009-12-31
+    summary: |
+      Project: Speech Enhancement in Non-stationary Noise Conditions.
+  - degree: B.Sc., Electrical Engineering (Communications Systems)
+    institution: Amirkabir University of Technology (Tehran Polytechnic), Iran
+    start: 2002-09-01
+    end: 2006-08-31
+    summary: |
+      Project: Classification of Digital Modulations via Wavelet Transform.
+
+experience:
+  - role: Associate Professor, Business Analytics
+    org: John Molson School of Business, Concordia University
+    start: 2025-06-01
+  - role: Assistant Professor, Business Analytics
+    org: John Molson School of Business, Concordia University
+    start: 2019-01-01
+    end: 2025-05-31
+  - role: Assistant Professor, Information Systems
+    org: School of Business, University of California, Riverside
+    start: 2018-07-01
+    end: 2018-12-31
+  - role: Postdoctoral Research Associate
+    org: UC Institute for Prediction Technology and Scalable Analytics Institute, UCLA
+    start: 2017-07-01
+    end: 2018-06-30
+    summary: |
+      Developing methods to predict public health and safety related outcomes.
+  - role: Postdoctoral Research Associate
+    org: Annenberg Public Policy Center, University of Pennsylvania, and University of Illinois, Urbana-Champaign
+    start: 2016-08-01
+    end: 2017-07-31
+    summary: |
+      Associations of Twitter with Zika attitudes, knowledge and behaviors; effects of different sources on knowledge and preventive behaviors related to Zika.
+  - role: Lecturer
+    org: Dept. of EECS, University of California, Merced
+    start: 2015-08-01
+    end: 2016-07-31
+
+skills:
+  - name: Programming & Tools
+    items:
+      - label: Python
+        level: 5
+      - label: Java, C/C++
+        level: 4
+      - label: R, SAS, SPSS, KNIME, Orange, Matlab
+        level: 4
+  - name: Research
+    items:
+      - label: Statistical Learning and Data Mining
+        level: 5
+      - label: Social Media Analytics
+        level: 5
+      - label: Academic Writing and Presentation
+        level: 5
+
+languages:
+  - name: English
+    level: 5
+    label: Fluent
+  - name: Farsi
+    level: 5
+    label: Fluent
+  - name: French
+    level: 4
+    label: Upper intermediate
+
+awards:
+  - title: Concordia Research Chair in Business Analytics for Public Health and Policy
+    awarder: Concordia University
+    date: "2023-01-01"
+    summary: Emerging scholar ($100,000).
+    icon: hero/trophy
+  - title: President's Media Outreach Award, Graduate Research Communicator of the Year
+    awarder: Concordia University
+    date: "2022-01-01"
+    icon: hero/trophy
+  - title: SSHRC, Principal Investigator
+    awarder: Social Sciences and Humanities Research Council
+    date: "2022-01-01"
+    summary: Understanding the Context and Discourses of Health-related False Information ($51,000).
+    icon: hero/trophy
